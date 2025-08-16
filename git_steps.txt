@@ -1,0 +1,82 @@
+✅ Step 1. Initialize Git in your project
+
+In your local Streamlit project folder (where app.py is):
+
+git init
+git add .
+git commit -m "Initial commit - Streamlit app"
+
+✅ Step 2. Create a GitHub repo
+
+Go to GitHub → click New Repository.
+
+Give it a name (e.g., my-streamlit-app).
+
+Keep it Public (required for Streamlit Cloud).
+
+Don’t initialize with README (since you already have code locally).
+
+Copy the repo URL (HTTPS or SSH). Example:
+
+https://github.com/username/my-streamlit-app.git
+
+✅ Step 3. Link local project to remote GitHub
+
+Back in your project folder:
+
+git remote add origin https://github.com/username/my-streamlit-app.git
+git branch -M main
+git push -u origin main
+
+
+Now your code is on GitHub 🚀
+
+✅ Step 4. Prepare files for deployment
+
+Streamlit Cloud requires:
+
+Your main app file (e.g., app.py)
+
+A requirements.txt with dependencies:
+
+pip freeze > requirements.txt
+
+
+(Optional) setup.sh if you need system packages
+
+Commit & push:
+
+git add requirements.txt
+git commit -m "Add requirements"
+git push origin main
+
+✅ Step 5. Deploy to Streamlit Community Cloud
+
+Go to Streamlit Cloud
+
+Click New app
+
+Connect your GitHub account (authorize once)
+
+Select:
+
+Repo: username/my-streamlit-app
+
+Branch: main
+
+Main file path: app.py
+
+Click Deploy 🎉
+
+⚡ Notes
+
+Any time you update your code locally, just:
+
+git add .
+git commit -m "Update app"
+git push origin main
+
+
+→ Streamlit Cloud auto-rebuilds your app.
+
+If using secrets (like API keys), add them in Streamlit Cloud → App Settings → Secrets (not in GitHub repo).
