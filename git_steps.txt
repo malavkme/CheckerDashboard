@@ -18,13 +18,13 @@ Don’t initialize with README (since you already have code locally).
 
 Copy the repo URL (HTTPS or SSH). Example:
 
-https://github.com/username/my-streamlit-app.git
+https://github.com/malavkme/CheckerDashboard.git
 
 ✅ Step 3. Link local project to remote GitHub
 
 Back in your project folder:
 
-git remote add origin https://github.com/username/my-streamlit-app.git
+git remote add origin https://github.com/malavkme/CheckerDashboard.git
 git branch -M main
 git push -u origin main
 
